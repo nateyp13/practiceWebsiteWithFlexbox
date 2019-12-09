@@ -1,0 +1,236 @@
+
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: black;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: red;
+}
+
+h2,
+h3 {
+	margin-top: 0 0 .8em 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+figure {
+	position: relative;
+	margin: 0;
+	line-height: 0;
+	margin-bottom: 2em;
+}
+
+figcaption {
+	font-size: 1em;
+	line-height: 1em;
+	color: #fff;
+	padding: 2px;
+	background: rgb(240,128,128, .85);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: black;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: darkred;
+}
+
+/* ---- Header ----*/
+.logo {
+	border: 2px solid black;
+}
+
+.banner {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* ---- Columns ---- */
+.secondary {
+	text-align: center;
+}
+
+.primary {
+	text-align: center;
+}
+
+.tertiary {
+	text-align: center;
+}
+
+/* ---- Footer ---- */
+
+.main-footer {
+	text-align: center;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	color: #fff;
+	background: red;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+}
+
+.col {
+	padding: 1em;
+	background: #edf4f7;
+	border-radius: .35em;
+	margin: 0 .5em .8em;
+
+}
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.button {
+	color: #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: #3acec2;
+	border-radius: .35em;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.main-header,
+	.container {
+		width: 90%;
+		margin: auto;
+	}
+}
+
+@media (min-width: 1025px) {
+	.main-header,
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+}
+
+
+/* =================================
+  Flex Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.container,
+	.main-header,
+	.main-nav {
+		display: flex;
+		justify-content: center;
+	}
+
+	.col {
+		flex: 1 300px;
+		display: flex;
+		flex-direction: column;
+	}
+	.main-nav {
+		flex-direction: row;
+	}
+
+	.main-header {
+		justify-content: center;
+		display: block;
+	}
+
+	.container {
+		flex-wrap: wrap;
+	}
+
+	.button {
+		align-self: flex-start;
+		margin-top: auto;
+	}
+}
+
+
+@media (min-width: 1025px) {
+	.main-header {
+		justify-content: space-between;
+		display:flex;
+	}
+
+}
